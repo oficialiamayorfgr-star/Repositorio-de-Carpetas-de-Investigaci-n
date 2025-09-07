@@ -389,6 +389,12 @@ function createFloatingSquares(){
     sq.style.animationDuration=(15+Math.random()*10)+"s"; container.appendChild(sq);
   }
 }
+  // Guardar logs en localStorage
+localStorage.setItem("logs", JSON.stringify(logs));
+
+// Recuperar logs al cargar la página
+logs = JSON.parse(localStorage.getItem("logs")) || [];
+
 createFloatingSquares();
 </script>
 
